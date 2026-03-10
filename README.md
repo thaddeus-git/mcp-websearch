@@ -58,19 +58,25 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
 ### OpenCode
 
-Add to your OpenCode MCP configuration:
+Add to `~/.config/opencode/opencode.json`:
 
 ```json
 {
-  "mcpServers": {
+  "mcp": {
     "websearch": {
-      "command": "mcp-websearch",
-      "env": {
+      "type": "local",
+      "command": ["mcp-websearch"],
+      "environment": {
         "BRIGHTDATA_API_TOKEN": "your_token_here"
       }
     }
   }
 }
+```
+
+Recommended: Install with pipx for global access:
+```bash
+pipx install git+https://github.com/thaddeus-git/mcp-websearch.git
 ```
 
 ### Cursor / Other MCP Clients
