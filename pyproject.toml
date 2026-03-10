@@ -1,0 +1,16 @@
+[project]
+name = "mcp-websearch"
+version = "0.1.0"
+description = "MCP server for web search using Bright Data API"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "brightdata-sdk>=2.0.0",
+]
+
+[project.scripts]
+mcp-websearch = "mcp_websearch:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
