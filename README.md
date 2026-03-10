@@ -69,6 +69,12 @@ For persistence, add to `~/.zshrc` or `~/.bashrc`.
 
 ## Adding to AI Agents
 
+### Claude Code
+
+```bash
+claude mcp add --transport stdio --env BRIGHTDATA_API_TOKEN=your_token_here web -- mcp-websearch
+```
+
 ### Claude Desktop
 
 Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
