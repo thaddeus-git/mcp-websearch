@@ -14,7 +14,7 @@ A single tool `web_search` that allows AI agents to search Google for up-to-date
 ## Installation
 
 ```bash
-pip install git+https://github.com/thaddeus/mcp-websearch.git
+pip install git+https://github.com/thaddeus-git/mcp-websearch.git
 ```
 
 Verify installation:
@@ -115,7 +115,7 @@ Search Google for information.
 ## Development
 
 ```bash
-git clone https://github.com/thaddeus/mcp-websearch.git
+git clone https://github.com/thaddeus-git/mcp-websearch.git
 cd mcp-websearch
 pip install -e .
 ```
