@@ -4,23 +4,32 @@ MCP server for Google web search using Bright Data API.
 
 ## Installation
 
+### For users
 ```bash
+pip install git+https://github.com/thaddeus/mcp-websearch.git
+```
+
+### For development
+```bash
+git clone https://github.com/thaddeus/mcp-websearch.git
+cd mcp-websearch
 pip install -e .
 ```
 
 ## Configuration
 
-Set your Bright Data API token:
+Set your Bright Data API token as an environment variable:
 
 ```bash
 export BRIGHTDATA_API_TOKEN=your_token_here
 ```
 
-Or create a `.env` file:
+Or add to your shell profile (`~/.zshrc` or `~/.bashrc`):
+```bash
+export BRIGHTDATA_API_TOKEN=your_token_here
+```
 
-```
-BRIGHTDATA_API_TOKEN=your_token_here
-```
+**Never commit your API token to git.** The `.env` file is for local development only.
 
 ## Usage
 
