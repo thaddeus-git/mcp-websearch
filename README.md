@@ -76,7 +76,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "websearch": {
+    "web": {
       "command": "mcp-websearch",
       "env": {
         "BRIGHTDATA_API_TOKEN": "your_token_here"
@@ -93,7 +93,7 @@ Add to `~/.config/opencode/opencode.json`:
 ```json
 {
   "mcp": {
-    "websearch": {
+    "web": {
       "type": "local",
       "command": ["mcp-websearch"],
       "environment": {

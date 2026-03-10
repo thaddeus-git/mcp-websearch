@@ -5,14 +5,14 @@ from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
 from brightdata import BrightDataClient
 
-server = Server("websearch")
+server = Server("web")
 
 
 @server.list_tools()
 async def list_tools() -> list[Tool]:
     return [
         Tool(
-            name="web_search",
+            name="search",
             description="Search Google for information",
             inputSchema={
                 "type": "object",
@@ -45,7 +45,7 @@ async def list_tools() -> list[Tool]:
 
 @server.call_tool()
 async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
-    if name != "web_search":
+    if name != "search":
         return [TextContent(type="text", text=f"Unknown tool: {name}")]
 
     token = os.environ.get("BRIGHTDATA_API_TOKEN")
