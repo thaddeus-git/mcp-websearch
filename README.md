@@ -13,13 +13,43 @@ A single tool `web_search` that allows AI agents to search Google for up-to-date
 
 ## Installation
 
+### macOS (Recommended)
+
+```bash
+brew install pipx
+pipx install git+https://github.com/thaddeus-git/mcp-websearch.git
+```
+
+### Linux / Windows
+
 ```bash
 pip install git+https://github.com/thaddeus-git/mcp-websearch.git
 ```
 
-Verify installation:
+### Verify
+
 ```bash
 mcp-websearch --help
+```
+
+## Troubleshooting
+
+### "externally-managed-environment" error
+
+This occurs on macOS with Homebrew Python. Use pipx instead:
+
+```bash
+brew install pipx
+pipx install git+https://github.com/thaddeus-git/mcp-websearch.git
+```
+
+### Command not found after install
+
+Ensure pipx bin is in your PATH:
+
+```bash
+pipx ensurepath
+# Then restart your shell
 ```
 
 ## Configuration
@@ -74,11 +104,6 @@ Add to `~/.config/opencode/opencode.json`:
 }
 ```
 
-Recommended: Install with pipx for global access:
-```bash
-pipx install git+https://github.com/thaddeus-git/mcp-websearch.git
-```
-
 ### Cursor / Other MCP Clients
 
 Use the same pattern - add `mcp-websearch` as a command with `BRIGHTDATA_API_TOKEN` in env.
@@ -125,6 +150,14 @@ git clone https://github.com/thaddeus-git/mcp-websearch.git
 cd mcp-websearch
 pip install -e .
 ```
+
+### Testing with MCP Inspector
+
+```bash
+npx @modelcontextprotocol/inspector mcp-websearch
+```
+
+Opens an interactive UI to test tools, view resources, and debug the server.
 
 ## Security
 
